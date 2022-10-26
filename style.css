@@ -92,9 +92,10 @@ nav {
     text-transform: uppercase;
     text-decoration: overline underline;
 }
-.main p {
+.main p.intro {
     margin-left: 15px;
     margin-right: 15px;
+    margin-bottom: 60px;
 }
 .main p a{
     text-decoration-line: underline;
@@ -110,23 +111,58 @@ nav {
     text-decoration-color: rgb(142,193,255);
     transition: all 0.3s ease-out;
 }
-/* .main p a::after {
-    content: "";
-    display: block;
-    position: absolute;
-    bottom: -1px;
-    width: 100%;
-    height: 1px;
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.3s ease-out;
-    background: #333;  
-}
-.main p a:hover::after {
-    transform: scaleX(1);
-} */
 
-@media (max-width: 550px) {
+.gameinfo {
+    text-align: left;
+    padding: 10px;
+    padding-bottom: 35px;
+    margin: 0 20px 10px 20px;
+    display: block;
+    /* flex-direction: column; */
+    border-color: #000000;
+    border-style: outset;
+    border-width: 3px;
+    border-radius: 25px;
+    box-shadow: 5px 5px #333;
+}
+.game-title {
+    font-weight: 800;
+    text-decoration: underline;
+}
+.gameinfo p {
+    margin-bottom: 10px;
+}
+.see-more{
+    background-color: #8ec1ff;
+    float: right;
+    margin-right: 20px;
+    padding: 5px 10px 5px 10px;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.2s ease-out;
+}
+.see-more:hover {
+    background-color: #62a9ff;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#8ec1ff",endColorstr="#499bff",GradientType=1);
+    transition: background-color 0.2s;
+}
+.gameinfo.more {
+    padding-bottom: 150px;
+}
+span.tag {
+    color: #8E9DFF;
+    background-color: transparent;
+    border-radius: 50px;
+    transition: color 0.2s ease-out, background-color 0.2s ease-out;
+}
+span.tag:hover {
+    background-color: #8E9DFF;
+    color: #111310;
+    border-radius: 50px;
+    transition: all 0.2s ease-out;
+}
+
+@media (max-width: 594px) {
     nav {
         padding: 15px 20px;
         position: relative;
