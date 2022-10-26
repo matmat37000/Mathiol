@@ -21,7 +21,8 @@ html, body {
 
 /* Nav bar */
 nav {
-    position: fixed;
+    position: sticky;
+    top: 0px;
     width: 100%;
     display: flex;
     align-items: center;
@@ -118,16 +119,23 @@ nav {
     padding-bottom: 35px;
     margin: 0 20px 10px 20px;
     display: block;
-    /* flex-direction: column; */
     border-color: #000000;
     border-style: outset;
     border-width: 3px;
-    border-radius: 25px;
+    border-radius: 10px;
     box-shadow: 5px 5px #333;
+}
+.title-content {
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
 }
 .game-title {
     font-weight: 800;
     text-decoration: underline;
+}
+.tag-list {
+    margin-left: auto;
 }
 .gameinfo p {
     margin-bottom: 10px;
@@ -162,10 +170,39 @@ span.tag:hover {
     transition: all 0.2s ease-out;
 }
 
+.tag-list span {
+    font-size: 12px;
+    font-weight: bold;
+    background-color: #8E9DFF;
+    color: #111310;
+    border-radius: 50px;
+    transition: all 0.2s ease-out;
+}
+.tag-list span:hover {
+    color: #8E9DFF;
+    background-color: transparent;
+    border-radius: 50px;
+    transition: color 0.2s ease-out, background-color 0.2s ease-out;
+}
+
+/* Footer */
+footer {
+    position: relative;
+    top: 100%;
+    left: 0;
+    right: 0;
+    margin-top: auto;
+    text-align: center;
+    padding-top: 15px;
+    background-color: #333;
+    padding-bottom: 50px;
+    color: #fafafa;
+}
+
 @media (max-width: 594px) {
     nav {
         padding: 15px 20px;
-        position: relative;
+        position: sticky;
     }
     
     .nav-icon {
@@ -222,9 +259,8 @@ span.tag:hover {
         transform: translate(0) rotate(-135deg);
     }
     
-    
     .navlinks-container {
-        max-height: 93.5vh;
+        max-height: 91vh;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -235,9 +271,11 @@ span.tag:hover {
         height: 100vh;
         padding: 10px 50px 15px 5px;
         border-right: 1px solid #c5c5c6;
+        border-bottom: 1px solid #c5c5c6;
         transform: translate(-100%);
     }
     .open {
+        box-shadow: 5px 5px 5px #0000003b;
         transform: translate(0%);
     }
     .navlinks-container a {
@@ -269,18 +307,3 @@ span.tag:hover {
     }
 }
 
-
-/* Footer */
-footer {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    margin-right: auto;
-    margin-left: auto;
-    text-align: center;
-    padding-top: 15px;
-    background-color: #333;
-    padding-bottom: 50px;
-    color: #fafafa;
-}
