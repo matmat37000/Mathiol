@@ -195,6 +195,59 @@ span.tag:hover {
     display: none;
 }
 
+/* main download */
+.games {
+    text-align: left;
+    display: block;
+    align-items: center;
+    display: block;
+}
+.download-games {
+    padding-left: 30px;
+    padding: 0 30px 15px 30px;
+    border-width: 2px;
+    border-style: outset;
+    border-color: #aaaaaa;
+    border-right: none;
+    border-left: none;
+    border-bottom: none;
+    box-shadow: none;
+}
+.title-download-game {
+    display: flex;
+    align-items: baseline;
+}
+.download-game-title {
+    text-decoration: underline;
+}
+.version {
+    color: #7a7a7a;
+    margin-left: 15px;
+}
+.change-log {
+    padding: 5px 0 0 0;
+    display: flex;
+}
+.button {
+    margin-left: auto;
+}
+.see-more-download{
+    background-color: #8ec1ff;
+    margin-right: 10px;
+    padding: 5px 10px 5px 10px;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.2s ease-out;
+}
+.see-more-download:hover {
+    background-color: #62a9ff;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#8ec1ff",endColorstr="#499bff",GradientType=1);
+    transition: background-color 0.2s;
+}
+.see-more-download a {
+    color: #111310;
+}   
+
 /* Footer */
 footer {
     position: relative;
@@ -319,6 +372,24 @@ footer {
     }
     .date-mini {
         display: flex;
+    }
+    
+    .button {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .see-more-download {
+        margin-bottom: 3px;
+    }
+    .download-games {
+        padding: 0 0px 15px 10px;
+    }
+    .title-download-game {
+        flex-direction: column;
+    }
+    .version {
+        margin: 0;
     }
 }
 
