@@ -127,6 +127,7 @@ nav {
 }
 .title-content {
     display: flex;
+    /* flex-direction: column; */
     align-items: center;
     padding-bottom: 10px;
 }
@@ -183,6 +184,15 @@ span.tag:hover {
     background-color: transparent;
     border-radius: 50px;
     transition: color 0.2s ease-out, background-color 0.2s ease-out;
+}
+.date,
+.date-mini {
+    color: #7a7a7a;
+    padding-left: 5px;
+    font-size: 12px;
+}
+.date-mini {
+    display: none;
 }
 
 /* Footer */
@@ -295,6 +305,20 @@ footer {
     }
     .navlinks-container a::after {
         background: #333;
+    }
+
+    .tag-list span{
+        padding: 0 4px 0 4px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 5px;
+    }
+    .date {
+        display: none;        
+    }
+    .date-mini {
+        display: flex;
     }
 }
 
