@@ -1,0 +1,35 @@
+.blur {
+    -webkit-backdrop-filter: blur(7px); /* assure la compatibilité avec safari */
+    backdrop-filter: blur(7px);
+}
+
+/* Sokoban by Mathiol */
+.sokoban {
+    z-index: -1;
+    background: url("picture/games/sokoban.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.sokoban .see-more-download {
+    background-color: #8ec1ff;
+}
+.sokoban .see-more-download:hover {
+    background-color: #62a9ff;
+}
+
+/* Jumping-king */
+.jumping-king {
+    color: #fff;
+    z-index: -1;
+    background: url("picture/games/jumping-kink.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.jumping-king .see-more-download {
+    background-color: #908eff;
+}
+.jumping-king .see-more-download:hover {
+    background-color: #626cff;
+}

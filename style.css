@@ -21,6 +21,7 @@ html, body {
 
 /* Nav bar */
 nav {
+    z-index: 1;
     position: sticky;
     top: 0px;
     width: 100%;
@@ -203,8 +204,6 @@ span.tag:hover {
     display: block;
 }
 .download-games {
-    padding-left: 30px;
-    padding: 0 30px 15px 30px;
     border-width: 2px;
     border-style: outset;
     border-color: #aaaaaa;
@@ -212,6 +211,13 @@ span.tag:hover {
     border-left: none;
     border-bottom: none;
     box-shadow: none;
+}
+.align-version {
+    display: inline-flex;
+    align-items: center;
+}
+.blur {
+    padding: 0 30px 120px 30px;
 }
 .title-download-game {
     display: flex;
@@ -221,8 +227,11 @@ span.tag:hover {
     text-decoration: underline;
 }
 .version {
-    color: #7a7a7a;
+    color: #363636;
+    background: rgb(202, 202, 202);
+    border-radius: 20px;
     margin-left: 15px;
+    padding: 0 5px 0 5px;
 }
 .change-log {
     padding: 5px 0 0 0;
@@ -232,7 +241,6 @@ span.tag:hover {
     margin-left: auto;
 }
 .see-more-download{
-    background-color: #8ec1ff;
     margin-right: 10px;
     padding: 5px 10px 5px 10px;
     border: none;
@@ -240,7 +248,6 @@ span.tag:hover {
     transition: background-color 0.2s ease-out;
 }
 .see-more-download:hover {
-    background-color: #62a9ff;
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#8ec1ff",endColorstr="#499bff",GradientType=1);
     transition: background-color 0.2s;
 }
@@ -375,6 +382,9 @@ footer {
     }
     
     .button {
+        position: absolute;
+        right: 0;
+        top: 5px;
         display: flex;
         align-items: center;
         flex-direction: column;
@@ -382,14 +392,19 @@ footer {
     .see-more-download {
         margin-bottom: 3px;
     }
-    .download-games {
-        padding: 0 0px 15px 10px;
-    }
     .title-download-game {
         flex-direction: column;
     }
     .version {
         margin: 0;
+    }
+    .blur {
+        padding: 0 0px 110px 10px;
+    }
+    .align-version {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
     }
 }
 
