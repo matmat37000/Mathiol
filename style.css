@@ -115,6 +115,10 @@ nav {
 }
 
 .gameinfo {
+    display: flex;
+    flex-direction: column-reverse;
+}
+.gameinfo div.blog {
     text-align: left;
     padding: 10px;
     padding-bottom: 35px;
@@ -130,7 +134,7 @@ nav {
     -10px -10px 15px rgba(255, 255, 255, 0.5), 
     10px 10px 15px rgba(70, 70, 70, 0.40);
 }
-.gameinfo:hover {
+.gameinfo div.blog:hover {
     box-shadow: 
     -10px -10px 15px rgba(255, 255, 255, 0.5), 
     10px 10px 15px rgba(70, 70, 70, 0.40),
