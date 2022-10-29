@@ -291,6 +291,27 @@ footer {
     padding-bottom: 50px;
     color: #fafafa;
 }
+.socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 0rem 0;
+}
+.socials li{
+    margin:  0 10px;
+}
+.socials a{
+    text-decoration: none;
+    color: inherit;
+}
+.socials a i{
+    font-size: 1.1rem;
+    transition: color .4s ease;
+}
+.socials a:hover i{
+    color: rgb(98, 184, 218);
+}
 
 @media (max-width: 594px) {
     nav {
