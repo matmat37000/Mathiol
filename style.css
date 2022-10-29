@@ -120,11 +120,23 @@ nav {
     padding-bottom: 35px;
     margin: 0 20px 10px 20px;
     display: block;
-    border-color: #000000;
+    transition: box-shadow 0.2s ease-out;
+    /* border-color: #000000;
     border-style: outset;
     border-width: 3px;
+    box-shadow: 5px 5px #333; */
     border-radius: 10px;
-    box-shadow: 5px 5px #333;
+    box-shadow: 
+    -10px -10px 15px rgba(255, 255, 255, 0.5), 
+    10px 10px 15px rgba(70, 70, 70, 0.40);
+}
+.gameinfo:hover {
+    box-shadow: 
+    -10px -10px 15px rgba(255, 255, 255, 0.5), 
+    10px 10px 15px rgba(70, 70, 70, 0.40),
+    inset -10px -10px 15px rgba(255, 255, 255, 0.5), 
+    inset 10px 10px 15px rgba(70, 70, 70, 0.40);
+    transition: box-shadow 0.2s;
 }
 .title-content {
     display: flex;
@@ -204,19 +216,26 @@ span.tag:hover {
     display: block;
 }
 .download-games {
-    border-width: 2px;
+    margin: 0 20px 10px 20px;
+    border-radius: 10px;
+    box-shadow: 
+    -10px -10px 15px rgba(255, 255, 255, 0.5), 
+    10px 10px 15px rgba(70, 70, 70, 0.40);
+    /* border-color: #aaaaaa;
     border-style: outset;
-    border-color: #aaaaaa;
+    border-width: 2px;
     border-right: none;
     border-left: none;
     border-bottom: none;
-    box-shadow: none;
+    box-shadow: none; */
 }
+
 .align-version {
     display: inline-flex;
     align-items: center;
 }
 .blur {
+    border-radius: 10px;
     padding: 0 30px 120px 30px;
 }
 .title-download-game {
@@ -228,7 +247,7 @@ span.tag:hover {
 }
 .version {
     color: #363636;
-    background: rgb(202, 202, 202);
+    background: #cacaca;
     border-radius: 20px;
     margin-left: 15px;
     padding: 0 5px 0 5px;
