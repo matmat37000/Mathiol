@@ -426,16 +426,21 @@ footer {
     }
     
     .button {
-        position: absolute;
-        right: 0;
-        top: 5px;
-        display: flex;
+        display: inline-flex;
         align-items: center;
-        flex-direction: column;
+        /* flex-direction: column; */
+        margin-left: 0;
     }
     .see-more-download {
+        padding-left: 50%;
+        padding-right: 50%;
+        text-align: center;
         margin-bottom: 3px;
     }
+    .see-more-download a {
+        text-align: center;
+    }
+
     .title-download-game {
         flex-direction: column;
     }
