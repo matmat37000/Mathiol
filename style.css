@@ -1,5 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Flex:opsz@8..144&display=swap');
 
+
+
+:root {
+    --main-bg-color: #eff0f3;
+    --secondary-bg-color: #fffffe;
+    --nav-bg-color: #0d0d0d;
+    --button-bg-color: #ff8e3c;
+    --highlight-bg-color: #ff8e3c;
+    
+
+    --button-fg-color: #0d0d0d;
+    --paragraphe-fg-color: #2a2a2a;
+    --link-fg-color: #00bad3;
+    
+    --stroke-color: #0d0d0d;
+    --transparent: #ffffff00;
+}
+
 *,
 ::before,
 ::after {
@@ -7,16 +25,21 @@
     margin: 0;
     padding: 0;
     text-decoration: none;
+
 }
 
 html, body {
     font-family: 'Montserrat', Helvetica, sans-serif;
-    background: #ffffff;
+    background: var(--main-bg-color);
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     /* height: 100%;
     width: 100%; */
+}
+p {
+    color: var(--paragraphe-fg-color);
+    font-weight: 600;
 }
 
 /* Nav bar */
@@ -28,7 +51,7 @@ nav {
     display: flex;
     align-items: center;
     padding: 15px 25px;
-    background-color: #111310;
+    background-color: var(--nav-bg-color);
     color: #fafafa;
     box-shadow: inset 0px -1px 0px #c5c5c6;
 }
@@ -45,7 +68,7 @@ nav {
     font-size: 25px;
     margin-left: 10px;
     font-weight: 400;
-    color: #fafafa;
+    color: var(--secondary-bg-color);
 }
 .nav-icon img {
     width: 40px;
@@ -58,7 +81,7 @@ nav {
     font-size: 16px;
     font-weight: 500;
     text-decoration: none;
-    color: #eeeeee;
+    color: var(--secondary-bg-color);
     display: inline-block;
     position: relative;
 }
@@ -85,7 +108,7 @@ nav {
     padding-bottom: 40px;
     text-align: center;
     /* background: red; */
-    color: #111310;
+    color: var(--paragraphe-fg-color);
 }
 .main h1 {
     font-size: 60px;
@@ -94,6 +117,9 @@ nav {
     text-transform: uppercase;
     text-decoration: overline underline;
 }
+.main p {
+    color: var(--paragraphe-fg-color);
+}
 .main p.intro {
     margin-left: 15px;
     margin-right: 15px;
@@ -101,16 +127,16 @@ nav {
 }
 .main p a{
     text-decoration-line: underline;
-    text-decoration-color: #99cd3200;
+    text-decoration-color: var(--transparent);
     position: inherit;
     display: inline-block;
-    color: inherit;
-    transition: text-decoration-color 0.3s ease-out, color 1s ease-out;
+    color: var(--link-fg-color);
+    transition: text-decoration-color 0.3s ease-out, color 0.3s ease-out;
 }
 
 .main p a:hover {
-    color: #8EC1FF;
-    text-decoration-color: rgb(142,193,255);
+    color: var(--link-fg-color);
+    text-decoration-color: var(--link-fg-color);
     transition: all 0.3s ease-out;
 }
 
@@ -118,7 +144,8 @@ nav {
     display: flex;
     flex-direction: column-reverse;
 }
-.gameinfo div.blog {
+.gameinfo details.blog {
+    user-select: none;
     text-align: left;
     padding: 10px;
     padding-bottom: 35px;
@@ -134,14 +161,30 @@ nav {
     -10px -10px 15px rgba(255, 255, 255, 0.5), 
     10px 10px 15px rgba(70, 70, 70, 0.40);
 }
-.gameinfo div.blog:hover {
+
+summary {list-style: none;}
+
+details summary::before {
+    content: "➕";
+    font-size: 20px;
+    display: inline-block;
+    margin-right: 10px;
+    transition: transform 0.4s ease-out;
+}
+
+details[open] summary::before {
+    transform: rotate(135deg);
+}
+
+
+/* .gameinfo details.blog:hover {
     box-shadow: 
     -10px -10px 15px rgba(255, 255, 255, 0.5), 
     10px 10px 15px rgba(70, 70, 70, 0.40),
     inset -10px -10px 15px rgba(255, 255, 255, 0.5), 
     inset 10px 10px 15px rgba(70, 70, 70, 0.40);
     transition: box-shadow 0.2s;
-}
+} */
 .title-content {
     display: flex;
     /* flex-direction: column; */
@@ -159,7 +202,8 @@ nav {
     margin-bottom: 10px;
 }
 .see-more{
-    background-color: #8ec1ff;
+    background-color: var(--button-bg-color);
+    color: var(--button-fg-color);
     float: right;
     margin-right: 20px;
     padding: 5px 10px 5px 10px;
@@ -167,23 +211,24 @@ nav {
     border-radius: 5px;
     transition: background-color 0.2s ease-out;
 }
-.see-more:hover {
+/* .see-more:hover {
     background-color: #62a9ff;
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#8ec1ff",endColorstr="#499bff",GradientType=1);
     transition: background-color 0.2s;
-}
+} */
 .gameinfo.more {
     padding-bottom: 150px;
 }
 span.tag {
-    color: #8E9DFF;
+    color: var(--link-fg-color);
     background-color: transparent;
     border-radius: 50px;
     transition: color 0.2s ease-out, background-color 0.2s ease-out;
+    padding: 0 5px 0 5px;
 }
 span.tag:hover {
-    background-color: #8E9DFF;
-    color: #111310;
+    background-color: var(--link-fg-color);
+    color: #eeeeee;
     border-radius: 50px;
     transition: all 0.2s ease-out;
 }
@@ -191,13 +236,13 @@ span.tag:hover {
 .tag-list span {
     font-size: 12px;
     font-weight: bold;
-    background-color: #8E9DFF;
+    background-color: var(--link-fg-color);
     color: #111310;
     border-radius: 50px;
     transition: all 0.2s ease-out;
 }
 .tag-list span:hover {
-    color: #8E9DFF;
+    color: var(--link-fg-color);
     background-color: transparent;
     border-radius: 50px;
     transition: color 0.2s ease-out, background-color 0.2s ease-out;
@@ -275,7 +320,7 @@ span.tag:hover {
     transition: background-color 0.2s;
 }
 .see-more-download a {
-    color: #111310;
+    color: var(--button-fg-color);
 }   
 
 /* Footer */
@@ -289,7 +334,7 @@ footer {
     padding-top: 15px;
     background-color: #333;
     padding-bottom: 50px;
-    color: #fafafa;
+    color: var(--secondary-bg-color);
 }
 .socials{
     list-style: none;
@@ -310,7 +355,7 @@ footer {
     transition: color .4s ease;
 }
 .socials a:hover i{
-    color: rgb(98, 184, 218);
+    color: var(--link-fg-color);
 }
 
 @media (max-width: 594px) {
