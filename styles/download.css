@@ -6,7 +6,7 @@
 /* Sokoban by Mathiol */
 .sokoban {
     z-index: -1;
-    background: url("picture/games/sokoban.png");
+    background: url("https://github.com/matmat37000/my-web-site/blob/master/picture/games/sokoban.png?raw=truepicture/games/sokoban.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -22,7 +22,7 @@
 .jumping-king {
     color: #fff;
     z-index: -1;
-    background: url("picture/games/jumping-kink.png");
+    background: url("https://github.com/matmat37000/my-web-site/blob/master/picture/games/jumping-kink.png?raw=true");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
