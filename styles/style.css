@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Flex:opsz@8..144&display=swap');
 
-
-
 :root {
     --main-bg-color: #eff0f3;
     --secondary-bg-color: #fffffe;
@@ -25,7 +23,6 @@
     margin: 0;
     padding: 0;
     text-decoration: none;
-
 }
 
 html, body {
@@ -38,7 +35,6 @@ html, body {
     width: 100%; */
 }
 p {
-    color: var(--paragraphe-fg-color);
     font-weight: 600;
 }
 
@@ -116,9 +112,6 @@ nav {
     padding-bottom: 35px;
     text-transform: uppercase;
     text-decoration: overline underline;
-}
-.main p {
-    color: var(--paragraphe-fg-color);
 }
 .main p.intro {
     margin-left: 15px;
@@ -358,7 +351,7 @@ footer {
     color: var(--link-fg-color);
 }
 
-@media (max-width: 594px) {
+@media (max-width: 595px) {
     nav {
         padding: 15px 20px;
         position: sticky;
@@ -419,7 +412,6 @@ footer {
     }
     
     .navlinks-container {
-        max-height: 91vh;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -427,7 +419,7 @@ footer {
         background: #fafafa;
         top: 100%;
         left: 0;
-        height: 100vh;
+        height: 92.3dvh;
         padding: 10px 50px 15px 5px;
         border-right: 1px solid #c5c5c6;
         border-bottom: 1px solid #c5c5c6;
@@ -471,10 +463,8 @@ footer {
     }
     
     .button {
-        display: inline-flex;
-        align-items: center;
-        /* flex-direction: column; */
-        margin-left: 0;
+        display: flex;
+        margin: 20px 5px;
     }
     .see-more-download {
         padding-left: 50%;
@@ -490,15 +480,15 @@ footer {
         flex-direction: column;
     }
     .version {
-        margin: 0;
+        margin: 10px;
     }
     .blur {
         padding: 0 0px 110px 10px;
     }
     .align-version {
         display: flex;
-        flex-direction: column;
-        align-items: flex-start;
+        /* flex-direction: column; */
+        align-items: center;
     }
 }
 
