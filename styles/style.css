@@ -294,7 +294,7 @@ span.tag:hover {
 }
 .change-log {
     padding: 5px 0 0 0;
-    display: flex;
+    /* display: flex; */
 }
 .button {
     margin-left: auto;
@@ -465,8 +465,6 @@ footer {
         margin: 20px 5px;
     }
     .see-more-download {
-        padding-left: 50%;
-        padding-right: 50%;
         text-align: center;
         margin-bottom: 3px;
     }

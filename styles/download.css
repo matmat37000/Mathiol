@@ -37,3 +37,20 @@
 .jumping-king .title-and-change-log {
     color: #fff;
 }
+
+@media (max-width: 595px) {
+    .download-games {
+        text-align: center;
+    }
+    
+    .title-download-game {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .button {
+        position: absolute;
+        bottom: 2px;
+    }
+}
